@@ -1,9 +1,11 @@
 package com.example.maichel.submission2.main
 
+import android.view.View
 import com.example.maichel.submission2.api.ApiRepository
 import com.example.maichel.submission2.api.SportDBApi
 import com.example.maichel.submission2.model.n15MatchResponse
 import com.google.gson.Gson
+import org.jetbrains.anko._LinearLayout
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread
 
@@ -21,7 +23,8 @@ class MainPresenter (private val view: MainView,
 
             uiThread {
                 view.hideLoading()
-                view.showTeamList(data.n15Match)
+                view.showTeamList(data.events)
+                //data.n15Match?.let { it1 -> view.showTeamList(it1) }
             }
         }
     }
@@ -36,7 +39,7 @@ class MainPresenter (private val view: MainView,
 
             uiThread {
                 view.hideLoading()
-                view.showTeamList(data.n15Match)
+                view.showTeamList(data.events)
             }
         }
     }

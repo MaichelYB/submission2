@@ -1,11 +1,13 @@
 package com.example.maichel.submission2.main
 
 import android.support.v7.widget.RecyclerView
+import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.example.maichel.submission2.R.id.team_name
+import com.example.maichel.submission2.R.id.team_val
 import com.example.maichel.submission2.model.next15Match
 import org.jetbrains.anko.*
 
@@ -36,6 +38,7 @@ class TeamUI: AnkoComponent<ViewGroup>{
                     textSize = 16f
                 }.lparams{
                     margin = dip(15)
+                    gravity = Gravity.CENTER
                 }
             }
         }
@@ -44,7 +47,6 @@ class TeamUI: AnkoComponent<ViewGroup>{
 
 class TeamViewHolder(view: View): RecyclerView.ViewHolder(view){
     private val teamName: TextView = view.find(team_name)
-
     fun bindItem(teams: next15Match){
         teamName.text = teams.event
     }

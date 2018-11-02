@@ -4,8 +4,8 @@ import com.google.gson.annotations.SerializedName
 
 data class next15Match (
     @SerializedName("strEvent")
-    var event: String? = null
-    /*@SerializedName("idEvent")
+    var event: String? = null,
+    @SerializedName("idEvent")
     var idEvent: String? = null,
     @SerializedName("idLeague")
     var idLeague: String? = null,
@@ -66,5 +66,5 @@ data class next15Match (
     @SerializedName("strHomeLineupForward")
     var strHomeLineupForward: String? = null,
     @SerializedName("strHomeLineupSubstitutes")
-    var strHomeLineupSubstitutes: String? = null*/
+    var strHomeLineupSubstitutes: String? = null
 )
